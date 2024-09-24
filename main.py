@@ -4,7 +4,7 @@ from capturing_tag_data import capture_tag_data
 
 def main():
     list_of_logs_obtained = capture_flow_log_data()
-    dictionary_containing_tags, tag_mappings = capture_tag_data()
+    dictionary_containing_tags = capture_tag_data()
     tags_output, protocols_output = core_logic.process_logs_and_count_tags(list_of_logs_obtained, dictionary_containing_tags, tag_mappings)
     
     print("---------------------final_Print-----------------------")

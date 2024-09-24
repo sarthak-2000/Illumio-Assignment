@@ -12,7 +12,6 @@ def capture_tag_data()-> dict:
     dict: A dictionary with tuples as keys and tuples as values.
     """
     tag_data = {}
-    tag_mappings = {}
     file_path = input("Please Enter the File Path Alongwith the filename for tag data (.txt file) -> ").strip() or 'tag_data2.txt'
 
     try:
@@ -32,7 +31,6 @@ def capture_tag_data()-> dict:
                         last_value = values[2].strip()
                         value_tuple = (last_value.lower(), last_value)
                         
-                        tag_mappings[key_tuple] = (values[0].strip(), values[1].strip())
                         # Add to the dictionary
                         tag_data[key_tuple] = value_tuple
                     else:
@@ -41,11 +39,8 @@ def capture_tag_data()-> dict:
         # Print the result to check
         for key, value in tag_data.items():
             print(f"    {key} : {value},")
-
-        for key, value in tag_mappings.items():
-            print(f"    {key} : {value},")
         
-        return tag_data, tag_mappings
+        return tag_data
 
     except FileNotFoundError:
         print(f"Error: The file '{file_path}' was not found.")

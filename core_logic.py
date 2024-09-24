@@ -35,7 +35,7 @@ from constants import PROTOCOL_MAPPINGS
 #     print("Protocols Output:", protocols_output)
     
     
-def process_logs_and_count_tags(list_of_logs_obtained: dict, tags_obtained:dict, tag_mappings: dict) -> tuple[dict, dict] :
+def process_logs_and_count_tags(list_of_logs_obtained: dict, tags_obtained:dict) -> tuple[dict, dict] :
     """
     Converts protocol identifiers in the log entries to their respective tags and counts occurrences of each tag and protocol.
 
