@@ -28,7 +28,7 @@ def capture_flow_log_data()-> list[list]:
         return []
 
 
-def extract_necessary_data(logs):
+def extract_necessary_data(logs: list)-> list:
     """
     Extracts necessary data from the flow log entries.
 

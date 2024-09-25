@@ -10,7 +10,7 @@
 
 22,tcp,sv_P4 
 
-3389,tcp,sv_P5 
+3389,tcP,sv_P5 
 
 0,icmp,sv_P5 
 
