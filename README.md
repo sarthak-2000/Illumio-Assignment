@@ -5,7 +5,7 @@ Just 24 hours back on Monday (23 September 2024) I got the email from the hiring
 **<u>[MOST IMPORTANT] similar assesment that I solved before</u>** -> [click on this github link](https://github.com/sarthak-2000/G-Research)
 # Question
 
-<details open>
+<details close>
 <summary> Click here to check the question given by the recruting team </summary>
 
 
@@ -13,7 +13,7 @@ Thank you for your interest in the Engineering position at Illumio. As part of o
 
 Please find the details of the exercise below. We ask that you complete the exercise within 48-72 hours, upload it to a GitHub project and share the project link with us. If you need more time, please tell me so I can update the hiring team. This assessment shouldn’t take longer than 2(ish) hours. Feel free to write the code in whatever environment you prefer.
 
-<details open>
+<details oclose>
 <summary>Description</summary>
 
 Write a program that can parse a file containing flow log data and maps each row to a tag based on a lookup table. The lookup table is defined as a csv file, and it has 3 columns, dstport,protocol,tag. The dstport and protocol combination decide what tag can be applied.
@@ -21,7 +21,7 @@ Write a program that can parse a file containing flow log data and maps each row
 </details>
 
 
-<details open>
+<details close>
 <summary>Sample flow logs (default logs, version 2 only).</summary>
 
 ```2 123456789012 eni-0a1b2c3d 10.0.1.201 198.51.100.2 443 49153 6 25 20000 1620140761 1620140821 ACCEPT OK
@@ -150,7 +150,7 @@ Thanks and best of luck!
 
 # Assumption
 
-<details open>
+<details close>
 <summary> Click Here to get the assumptions </summary>
 
 The following are the assumptions that I made, while writing the code for this assessment.
@@ -207,7 +207,7 @@ or else best way is to open the project in vscode and click on play button on th
 
 # Requirements
 
-<i>Just download python3 thats it.</i>
+<u>Just download python3 thats it.</u>
 
 # Logic of the code
 
