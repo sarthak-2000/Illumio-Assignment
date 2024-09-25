@@ -1,5 +1,4 @@
 # Question
----
 
 Just 24 hours back on Monday (23 September 2024) I got the email from the hiring team regarding the following assesments with the question as follows.
 
@@ -133,7 +132,6 @@ Please avoid using non-default libraries or packages like Hadoop, spark, pandas 
 Thanks and best of luck!
 
 # Assumption
----
 
 The following are the assumptions that I made, while writing the code for this assessment.
 
@@ -160,7 +158,6 @@ sv_p1 -> 2
 sv_p5 -> 1 
 
 # How to run this file
----
 
 Just clone this repo and run the below command from the terminal (please stay in the th same folder)
 ``` python
@@ -169,12 +166,11 @@ python main.py
 or else best way is to open the project in vscode and click on play button on the top-right corner while from main.py file thats it nothing fancy is required.
 
 # Requirements
----
 
 Just download python3 thats it.
 
 # Logic of the code
----
+
 
 
 
