@@ -1,6 +1,6 @@
 # Summary
 
-Just 24 hours back on Monday (23 September 2024) I got the email from the hiring team regarding the following assesments with the question as follows. Please refer to following sections as to what I have done and how you can check my solution.
+Just 24 hours back on Monday (23 September 2024) I got the email from the hiring team regarding the following assesment with the question as follows. Please refer to following sections as to what I have done and how you can check my solution.
 
 **<u>[MOST IMPORTANT] similar assesment that I solved before</u>** -> [click on this github link](https://github.com/sarthak-2000/G-Research)
 # Question
