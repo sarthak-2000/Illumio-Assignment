@@ -199,7 +199,7 @@ sv_p5 -> 1
 
 # How to run this file
 
-Just clone this repo and run the below command from the terminal (please stay in the th same folder)
+Just clone this repo and run the below command from the terminal (please stay in the the same folder)
 ``` python
 python main.py
 ```
@@ -211,14 +211,14 @@ or else best way is to open the project in vscode and click on play button on th
 
 # Logic of the code
 
-Sequential execution of the progrma is as per below.
+Sequential execution of the program is as per below.
 1. <u>input_logic.py</u> is called with both the methods capturing thr flow log records and look up table file. By default the name of the two files which is used in the input for the data is (you can dynamically give the name of the input files when prompted).
 ```
 flow_log_data.txt -> for flow log records
 lookup_table.txt -> for look up table related data
 ```
 2. We get two dictionaries for the important and relevant data which is then passed to <u>core_logic.py</u> file.
-3. After getting the main data in the dorm of tow dictionaries, subsequently the data is written in the output file using <u> output_logic.py</u>. By default the output files are names as follows, but user can get the overall idea as to how 
+3. After getting the main data in the dorm of tow dictionaries, subsequently the data is written in the output file using <u> output_logic.py</u>. By default the output files are names as follows, but user dynamically give the name of the input files when prompted.
 ```
 port_protocol_count_OUTPUT -> output file for port and protocol combination.
 tag_count_OUTPUT -> output file for tag counts obtained.
