@@ -159,4 +159,16 @@ sv_p5 -> 1
 
 # How to run this file
 
+Just clone this repo and run the below command from the terminal (please stay in the th same folder)
+``` python
+python main.py
+```
+or else best way is to open the project in vscode and click on play button on the top-right corner while from main.py file thats it nothing fancy is required.
+
+# Requirements
+
+just download python3 thats it.
+
+# Logic of the code
+
 
