@@ -1,18 +1,30 @@
+# Summary
+
+Just 24 hours back on Monday (23 September 2024) I got the email from the hiring team regarding the following assesments with the question as follows. Please refer to following sections as to what I have done and how you can check my solution.
+
+**<u>[MOST IMPORTANT] similar assesment that I solved before</u>** -> [click on this github link](https://github.com/sarthak-2000/G-Research)
 # Question
 
-Just 24 hours back on Monday (23 September 2024) I got the email from the hiring team regarding the following assesments with the question as follows.
+<details open>
+<summary> Click here to check the question given by the recruting team </summary>
+
 
 Thank you for your interest in the Engineering position at Illumio. As part of our interview process, we would like to assess your technical skills through a take-home coding exercise.
 
 Please find the details of the exercise below. We ask that you complete the exercise within 48-72 hours, upload it to a GitHub project and share the project link with us. If you need more time, please tell me so I can update the hiring team. This assessment shouldn’t take longer than 2(ish) hours. Feel free to write the code in whatever environment you prefer.
 
-Description
+<details open>
+<summary>Description</summary>
 
 Write a program that can parse a file containing flow log data and maps each row to a tag based on a lookup table. The lookup table is defined as a csv file, and it has 3 columns, dstport,protocol,tag. The dstport and protocol combination decide what tag can be applied.
 
-Sample flow logs (default logs, version 2 only).
+</details>
 
-2 123456789012 eni-0a1b2c3d 10.0.1.201 198.51.100.2 443 49153 6 25 20000 1620140761 1620140821 ACCEPT OK
+
+<details open>
+<summary>Sample flow logs (default logs, version 2 only).</summary>
+
+```2 123456789012 eni-0a1b2c3d 10.0.1.201 198.51.100.2 443 49153 6 25 20000 1620140761 1620140821 ACCEPT OK
 
 2 123456789012 eni-4d3c2b1a 192.168.1.100 203.0.113.101 23 49154 6 15 12000 1620140761 1620140821 REJECT OK
 
@@ -38,7 +50,11 @@ Sample flow logs (default logs, version 2 only).
 
 2 123456789012 eni-2d2e2f3g 192.168.2.7 77.88.55.80 49153 993 6 7 3500 1620140661 1620140721 ACCEPT OK
 
-2 123456789012 eni-4h5i6j7k 172.16.0.2 192.0.2.146 49154 143 6 9 4500 1620140661 1620140721 ACCEPT OK
+2 123456789012 eni-4h5i6j7k 172.16.0.2 192.0.2.146 49154 143 6 9 4500 1620140661 1620140721 ACCEPT OK 
+```
+</details>
+
+
 
 For e.g. the lookup table file can be something like:
 
@@ -130,39 +146,56 @@ Also, please include instructions on how to compile/run the program, what tests 
 Please avoid using non-default libraries or packages like Hadoop, spark, pandas etc. The idea is to be able to review and run the program on a local machine without needing to install too many dependencies / packages.
 
 Thanks and best of luck!
+</details>
 
 # Assumption
 
+<details open>
+<summary> Click Here to get the assumptions </summary>
+
 The following are the assumptions that I made, while writing the code for this assessment.
 
-1. Here, my assumption is that for version 2 of flow-log records is that for getting the dstport and protocol number -> its there at 7th and 8th position (for 0th order indexing its on 6th and 7th position as per this link -> [AWS reference link given](https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html)) in the whole log file on each and every line.
-2. **(THE MOST IMPORTANT ASSUMPTION)** -> I have genralized the output with all tags in lowercase, and port/protocol combinations also in lowercase. Since, the requirents had the point -> **The matches should be case insensitive**
+1. Here, my assumption is that for version 2 of flow-log records is that for getting the dstport and protocol number <u> its there at 7th and 8th position (for 0th order indexing its on 6th and 7th position as per this link -> [AWS reference link given](https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html)) in the whole log file on each and every line. </u>
 
-So, the look up table.txt file might have data like. For Example, 
+2. **<u>(THE MOST IMPORTANT ASSUMPTION)</u>** -> I have genralized the output with all tags in lowercase, and port/protocol combinations also in lowercase. Since, the requirents given to me had the point (please refer the question) -> **The matches should be case insensitive**
 
+So, <u> the look up table (.txt)</u> file might have data like. For Example, 
+
+```
 25,tCp,sv_P1 -> (uppercase C)
 
 23, uDp, sv_P1 -> (uppercase D)
+```
 
-then the output for port/protocol combination would be generalized to lowercase ->
+then the <u> output for port/protocol </u> combination would be generalized to lowercase ->
 
+```
 25,tcp,sv_P1 -> (lowercase C)
 
 23, udp, sv_p1 -> (lowercase D)
+```
 
-Moreover, for port/protocol combination for given lookup-table data I have generalized it to lowercase too. For Example,
+Moreover, for <u> port/protocol combination </u>for given lookup-table data I have generalized it to lowercase too. For Example,
 
+```
 25,tcp,sv_P1 -> (uppercase P)
 
 23, udp, sv_p1 -> (lowercase p)
 
 25, icmp, sv_P5 -> (uppercase P)
+```
 
-output for port/protocol combination count is ->
+output for <u> port/protocol combination</u> count is -> 
 
+```
 sv_p1 -> 2
 
 sv_p5 -> 1 
+```
+
+3. I am assumping that the files for input and output will be both txt.
+
+</details>
 
 # How to run this file
 
@@ -174,10 +207,26 @@ or else best way is to open the project in vscode and click on play button on th
 
 # Requirements
 
-Just download python3 thats it.
+<i>Just download python3 thats it.</i>
 
 # Logic of the code
 
+Sequential execution of the progrma is as per below.
+1. <u>input_logic.py</u> is called with both the methods capturing thr flow log records and look up table file. By default the name of the two files which is used in the input for the data is (you can dynamically give the name of the input files when prompted).
+```
+flow_log_data.txt -> for flow log records
+lookup_table.txt -> for look up table related data
+```
+2. We get two dictionaries for the important and relevant data which is then passed to <u>core_logic.py</u> file.
+3. After getting the main data in the dorm of tow dictionaries, subsequently the data is written in the output file using <u> output_logic.py</u>. By default the output files are names as follows, but user can get the overall idea as to how 
+```
+port_protocol_count_OUTPUT -> output file for port and protocol combination.
+tag_count_OUTPUT -> output file for tag counts obtained.
+```
 
+
+## Flow of program (pictorial representation)
+
+<img src="flow_of_program.jpg" alt="flow_of_program">
 
 

@@ -21,7 +21,7 @@ def output_port_protocol_combination(port_protocol_counts: Dict[Tuple[str, str],
     Args:
         port_protocol_counts: A dictionary containing port/protocol counts.
     """
-    file_name = input("Enter output file name for port/protocol count file-> ").strip() or 'port-protocol_count_OUTPUT.txt'
+    file_name = input("Enter output file name for port/protocol count file-> ").strip() or 'port_protocol_count_OUTPUT.txt'
 
     with open(file_name, 'w') as file:
         for (port, protocol), count in port_protocol_counts.items():
