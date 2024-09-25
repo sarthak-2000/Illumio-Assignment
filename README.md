@@ -227,6 +227,6 @@ tag_count_OUTPUT -> output file for tag counts obtained.
 
 ## Flow of program (pictorial representation)
 
-<img src="flow_of_program.jpg" alt="flow_of_program">
+![flow_of_program](flow_of_program.png)
 
 
