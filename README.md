@@ -1,6 +1,6 @@
 # Summary
 
-Just 24 hours back on Monday (23 September 2024) I got the email from the hiring team regarding the following assesment with the question as follows. Please refer to following sections as to what I have done and how you can check my solution.
+Just 24 hours back on Monday (23 September 2024) I got an email from the hiring team regarding the assessment with the question as follows. Please refer to following sections as to what I have done and how you can check my solution.
 
 **<u>[MOST IMPORTANT] similar assesment that I solved before</u>** -> [click on this github link](https://github.com/sarthak-2000/G-Research)
 # Question
@@ -127,11 +127,11 @@ Port,Protocol,Count
 
 Requirement details
 
-* Input file as well as the file containing tag mappings are plain text (ascii) files  
+* Input file as well as the file containing tag mappings are plain text (ASCII) files  
 * The flow log file size can be up to 10 MB
 * The lookup file can have up to 10000 mappings
-* The tags can map to more than one port, protocol combinations. for e.g. sv_P1 and sv_P2 in the sample above.
-* The matches should be case insensitive
+* The tags can map to more than one port, and protocol combinations. e.g. sv_P1 and sv_P2 in the sample above.
+* The matches should be case-insensitive
 
 For anything else that is not clear, please make reasonable assumptions and document those in the Readme to be sent with your submission.
 
@@ -143,7 +143,7 @@ Please upload the submission to any of the collaboration portals like GitHub tha
 
 Also, please include instructions on how to compile/run the program, what tests were done, and any other analysis you may want to share about your code/program.
 
-Please avoid using non-default libraries or packages like Hadoop, spark, pandas etc. The idea is to be able to review and run the program on a local machine without needing to install too many dependencies / packages.
+Please avoid using non-default libraries or packages like Hadoop, spark, pandas, etc. The idea is to be able to review and run the program on a local machine without needing to install too many dependencies/packages.
 
 Thanks and best of luck!
 </details>
@@ -153,13 +153,13 @@ Thanks and best of luck!
 <details close>
 <summary> Click Here to get the assumptions </summary>
 
-The following are the assumptions that I made, while writing the code for this assessment.
+The following are the assumptions that I made while writing the code for this assessment.
 
-1. Here, my assumption is that for version 2 of flow-log records is that for getting the dstport and protocol number <u> its there at 7th and 8th position (for 0th order indexing its on 6th and 7th position as per this link -> [AWS reference link given](https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html)) in the whole log file on each and every line. </u>
+1. Here, I assume that for version 2 of flow-log records is that for getting the dstport and protocol number <u> it's there at the 7th and 8th position (for 0th order indexing it's on the 6th and 7th position as per this link -> [AWS reference link given](https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html)) in the whole log file on every line. </u>
 
-2. **<u>(THE MOST IMPORTANT ASSUMPTION)</u>** -> I have genralized the output with all tags in lowercase, and port/protocol combinations also in lowercase. Since, the requirents given to me had the point (please refer the question) -> **The matches should be case insensitive**
+2. **<u>(THE MOST IMPORTANT ASSUMPTION)</u>** -> I have generalized the output with all tags in lowercase, and port/protocol combinations also in lowercase. Since the requirements given to me had the point (please refer to the question) -> **The matches should be case insensitive**
 
-So, <u> the look up table (.txt)</u> file might have data like. For Example, 
+So, <u> the lookup table (.txt)</u> file might have data like. For Example, 
 
 ```
 25,tCp,sv_P1 -> (uppercase C)
@@ -193,17 +193,17 @@ sv_p1 -> 2
 sv_p5 -> 1 
 ```
 
-3. I am assumping that the files for input and output will be both txt.
+3. I am assuming that the files for input and output will be both .txt files.
 
 </details>
 
 # How to run this file
 
-Just clone this repo and run the below command from the terminal (please stay in the the same folder)
+Just clone this repo and run the below command from the terminal (please stay in the same folder)
 ``` python
 python main.py
 ```
-or else best way is to open the project in vscode and click on play button on the top-right corner while from main.py file thats it nothing fancy is required.
+or else the best way is to open the project in vs code and click on the play button on the top-right corner while from the main.py file that's it nothing fancy is required.
 
 # Requirements
 
@@ -211,14 +211,14 @@ or else best way is to open the project in vscode and click on play button on th
 
 # Logic of the code
 
-Sequential execution of the program is as per below.
-1. <u>input_logic.py</u> is called with both the methods capturing thr flow log records and look up table file. By default the name of the two files which is used in the input for the data is (you can dynamically give the name of the input files when prompted).
+The sequential execution of the program is as per below.
+1. <u>input_logic.py</u> is called with both methods capturing the flow log records and lookup table file. By default, the name of the two files which is used in the input for the data is (you can dynamically give the name of the input files when prompted).
 ```
 flow_log_data.txt -> for flow log records
-lookup_table.txt -> for look up table related data
+lookup_table.txt -> for lookup table-related data
 ```
 2. We get two dictionaries for the important and relevant data which is then passed to <u>core_logic.py</u> file.
-3. After getting the main data in the dorm of tow dictionaries, subsequently the data is written in the output file using <u> output_logic.py</u>. By default the output files are names as follows, but user dynamically give the name of the input files when prompted.
+3. After getting the main data in the dorm of two dictionaries, subsequently the data is written in the output file using <u> output_logic.py</u>. By default, the output files are named as follows, but user dynamically give the name of the input files when prompted.
 ```
 port_protocol_count_OUTPUT -> output file for port and protocol combination.
 tag_count_OUTPUT -> output file for tag counts obtained.
