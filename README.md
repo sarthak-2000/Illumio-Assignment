@@ -141,20 +141,27 @@ The following are the assumptions that I made, while writing the code for this a
 So, the look up table.txt file might have data like. For Example, 
 
 25,tCp,sv_P1 -> (uppercase C)
+
 23, uDp, sv_P1 -> (uppercase D)
 
 then the output for port/protocol combination would be generalized to lowercase ->
+
 25,tcp,sv_P1 -> (lowercase C)
+
 23, udp, sv_p1 -> (lowercase D)
 
 Moreover, for port/protocol combination for given lookup-table data I have generalized it to lowercase too. For Example,
 
 25,tcp,sv_P1 -> (uppercase P)
+
 23, udp, sv_p1 -> (lowercase p)
+
 25, icmp, sv_P5 -> (uppercase P)
 
 output for port/protocol combination count is ->
+
 sv_p1 -> 2
+
 sv_p5 -> 1 
 
 # How to run this file
