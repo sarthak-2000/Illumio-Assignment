@@ -12,7 +12,7 @@ def main() -> None:
     3. Processes logs and counts tags using `core_logic`.
     4. Outputs tag counts and port/protocol combinations.
     """
-
+    
     flow_logs = capture_flow_log_data()
     tags = capture_tag_data()
     tag_counts, port_protocol_counts = core_logic.process_logs_and_count_tags(flow_logs, tags)
@@ -23,4 +23,5 @@ def main() -> None:
     
     
     
-main()
+if __name__ == "__main__":
+    main()

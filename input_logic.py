@@ -58,7 +58,7 @@ def capture_tag_data()-> dict:
     dict: A dictionary with tuples as keys and tuples as values.
     """
     tag_data = {}
-    file_path = input("Please Enter the File Path Alongwith the filename for tag data (.txt file) -> ").strip() or 'tag_data2.txt'
+    file_path = input("Please Enter the File Path Alongwith the filename for tag data (.txt file) -> ").strip() or 'lookup_table2.txt'
 
     try:
         with open(file_path, 'r') as file:
